@@ -28,9 +28,17 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS=['localhost','https://omavyadav9-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai']
-CSRF_TRUSTED_ORIGINS=['https://omavyadav9-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai']
-
+ALLOWED_HOSTS=[
+    'localhost',
+    '127.0.0.1',
+    'https://omavyadav9-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai',  # Add the correct frontend domain
+]
+CSRF_TRUSTED_ORIGINS = [
+    'https://omavyadav9-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai',
+    'https://omavyadav9-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai',  # Add the correct URL here
+    'http://localhost:3000',  # If using HTTP locally
+    'https://localhost:3000',  # If using HTTPS locally
+]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
 }
